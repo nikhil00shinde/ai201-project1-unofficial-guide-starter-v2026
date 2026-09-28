@@ -1,31 +1,12 @@
 # The Unofficial Guide
 
-<!-- Replace this line with your name and which corpus you picked. -->
+Nikhil Shinde , campus_life
 
-> **This file is your submission.** Fill it in as you go — most sections get
-> written during the milestone that produces them, not at the end.
->
-> How the starter works, and every command you'll need, is in `RUNNING.md`.
-> Leave that file alone.
->
-> **Paste everything as text.** No screenshots, no video. A typed table gets
-> full credit; a picture of the same table gets none.
->
-> Delete these instruction blocks as you replace them. The `<!-- -->` comments
-> are notes to you and don't show up when the page renders — you can leave them
-> or remove them.
-
----
 
 # Unit 1
 
 ## What This Does
 
-<!-- Three or four sentences. Which corpus you picked, and the kinds of
-     questions your system answers. Write it for someone who has never seen
-     this repo.
-
-     Milestone 5. -->
 
 ## Chunking Strategy
 
@@ -36,14 +17,7 @@
 
 ## Sample Chunks
 
-<!-- Five chunks, pasted as text. Label each one and name the file it came from
-     AND the function that produced it — the grader checks your code against
-     what you claim here.
 
-     `python app.py chunks -n 5` prints all three for you. Copy them straight
-     across.
-
-     Milestone 3. -->
 
 
 **Chunk 1** — source: `admin_add_drop_deadline.txt#0 ` — produced by: `chunker.py::split_documents`
@@ -93,12 +67,11 @@ The good: cheapest housing tier by about $900 a year, and the singles are real s
 
 The provided documents do not mention any price differences between weekends and weekdays.
 
-```
-```
+
 
 **My relevance cutoff:**
 
-I kept the relevance cutoff 0.6, I think if will try find the all possible lowest distance that might help the LLM to build an answer
+I kept the relevance cutoff 0.6, I think it will try to find all possible lowest distance, that might help the LLM to build an answer
 
 | Question | In corpus? | Best distance |
 |---|---|---|
@@ -112,7 +85,7 @@ I kept the relevance cutoff 0.6, I think if will try find the all possible lowes
 
 **1.** I have used Claude AI to help me design and understand the chunking as it was tricky to understand the flow
 
-**2.**
+**2.** I have used to explain certain things about the code.
 
 <!-- ── Stretch features ─────────────────────────────────────────────────────
      Doing one? Say so here BEFORE you start. A feature this README never

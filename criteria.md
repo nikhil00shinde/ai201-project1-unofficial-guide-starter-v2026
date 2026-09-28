@@ -55,7 +55,7 @@ in at least 4 of 5 tries.
 
 ---
 
-## 4. Something about your chunks
+## 4. Scope it to the question
 
 
 <!-- After reading relevant chunks taking answer that is relevant to question-->

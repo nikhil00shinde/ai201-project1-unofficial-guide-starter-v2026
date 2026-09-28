@@ -29,18 +29,10 @@
 
 ## Chunking Strategy
 
-**Chunk size:**
-**Overlap:**
+**Chunk size:** Not fixed number. I have split the paragraphs, so chunks average 101 characters
+**Overlap:** None
 
-<!-- What about YOUR documents made you pick these numbers? Short posts and
-     long sectioned guides don't want the same chunking, and "800 seemed
-     reasonable" earns nothing. Point at something you noticed when you read
-     the documents in Milestone 1.
 
-     If you changed your mind partway through, say so and say why. That's worth
-     more than pretending you got it right first time.
-
-     Milestone 3. -->
 
 ## Sample Chunks
 
@@ -53,29 +45,35 @@
 
      Milestone 3. -->
 
-**Chunk 1** — source: `` — produced by: ``
+
+**Chunk 1** — source: `admin_add_drop_deadline.txt#0 ` — produced by: `chunker.py::split_documents`
 
 ```
+On the add/drop deadline
 ```
 
-**Chunk 2** — source: `` — produced by: ``
+**Chunk 2** — source: `course_cs_210_workload.txt#2` — produced by: `chunker.py::split_documents`
 
 ```
+It's front-loaded — the first month is heavier than the rest, partly because you're learning the format.
 ```
 
-**Chunk 3** — source: `` — produced by: ``
+**Chunk 3** — source: `course_phys_130.txt#3` — produced by: `chunker.py::split_documents`
 
 ```
+The one piece of advice: the lab practical is worth 20% and almost nobody prepares for it.
 ```
 
-**Chunk 4** — source: `` — produced by: ``
+**Chunk 4** — source: `dining_verrill_street_grill.txt#1` — produced by: `chunker.py::split_documents`
 
 ```
+I'm a junior and I've done this twice now. Wait times: up to 30 minutes on Friday evenings, otherwise under 10. The thing worthgoing for is the burger, which is the only late-night hot food on campus. The thing to know is that one register, so the queue is a single line no matter how busy.
 ```
 
-**Chunk 5** — source: `` — produced by: ``
+**Chunk 5** — source: `housing_morrow_house.txt#2` — produced by: `chunker.py::split_documents`
 
 ```
+The good: cheapest housing tier by about $900 a year, and the singles are real singles.
 ```
 
 ## Sample Answer
@@ -83,40 +81,36 @@
 <!-- One complete question and answer, pasted as text, with the source line
      visible. Milestone 4. -->
 
-**Question:**
+**Question:** "Laundry machine price on weekends and weekdays"
+  (best distance 0.386, cutoff 0.6)
 
-**Answer:**
+
+
+**Answer:** Based on the documents, the laundry prices for the buildings are:
+- Old Brewhouse: $1.50 for a wash and $1.50 for a dry. (Source: `housing_old_brewhouse_laundry.txt` and `housing_old_brewhouse.txt`)
+- Morrow House: $1.50 for a wash and $1.25 for a dry. (Source: `housing_morrow_house.txt` and `housing_morrow_house_laundry.txt`)
+- Innisfree Hall: $1.75 for a wash and $1.75 for a dry. (Source: `housing_innisfree_hall_laundry.txt`)
+
+The provided documents do not mention any price differences between weekends and weekdays.
 
 ```
 ```
 
 **My relevance cutoff:**
 
-<!-- The number you set in config.py, and how you got there.
-
-     You ran five questions your corpus covers and the five in OUT_OF_SCOPE
-     that it clearly doesn't, and wrote down the best distance for each. What
-     did those two groups look like? Where was the gap? Put the actual numbers
-     here — the table below wants all ten rows.
-
-     Milestone 4. -->
+I kept the relevance cutoff 0.6, I think if will try find the all possible lowest distance that might help the LLM to build an answer
 
 | Question | In corpus? | Best distance |
 |---|---|---|
-|  |  |  |
+| What is deadline to add/drop courses? | Yes | 0.300 |
+| What's my birthday? | No | 0.803 |
+| Can we declare major a bit late | yes | 0.276 |
 
 ## How I Used AI
 
-<!-- Two specific moments. For each: what you asked for, what came back, and
-     what you changed about it.
 
-     "I asked Claude to write the chunking function from my notes. It ignored
-     the overlap, so I added that myself" is the level of detail we're after.
-     "I used AI to help me code" is not.
 
-     Milestone 5. -->
-
-**1.**
+**1.** I have used Claude AI to help me design and understand the chunking as it was tricky to understand the flow
 
 **2.**
 

@@ -27,7 +27,7 @@ QUESTIONS = [
     {"question": "Can we do grade appeal? if yes when", "expects": "yes, within fifteen days of the grade posting"},
     {"question": "What's the thing with library hold book?", "expects": "you can place a hold on a checkout book and it usually arrives in two to three days"},
     {"question": "working on campus counts towards financial aid", "expects": "work study earning dont count against your financial aid the way ordinary income does."},
-    {"question": "Can we declare major a bit late", "expects": "yes, but declaring early expects that it assings you a departmental advisor, who is generally more useful than the general one."},
+    {"question": "Can we declare major a bit later", "expects": "yes, but declaring early expects that it assings you a departmental advisor, who is generally more useful than the general one."},
 ]
 
 # Questions from a different world entirely. Your gate should refuse all five.
